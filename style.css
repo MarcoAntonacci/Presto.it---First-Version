@@ -1,0 +1,46 @@
+:root {
+    --main-color: #09B1BA;
+    --accent-color: #FC7B36;
+    --black: #022527;
+    --white: #ECFDFE;
+}
+
+
+*{font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Crimson Text', serif;
+}
+
+.presto-logo {
+    color: var(--main-color);
+}
+
+
+.icona-ricerca {
+    color: var(--accent-color);
+    border-color:var(--main-color);
+    transition: ease-in-out 0.5s;
+}
+
+.icona-ricerca:hover {
+    /* color: var(--accent-color); */
+    background-color:var(--main-color);
+    color:white;
+}
+
+.bordo-ricerca {
+    color: var(--accent-color);
+    border-color:var(--main-color);
+    transition: ease-in-out 0.5s;
+}
+
+.link-zoom a:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+}
+
+#inline-block {
+    display: inline-block;
+}
