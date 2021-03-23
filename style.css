@@ -13,12 +13,20 @@ h1, h2, h3, h4 {
     font-family: 'Crimson Text', serif;
 }
 
-h1 {
+h1, h2, h3, h4 {
     color:var(--accent-color);
 }
 
 p {
     color: var(--black);
+}
+
+.span-color2{
+    color: var(--accent-color);
+}
+.span-color1{
+    color: var(--main-color);
+    font-family: 'Crimson Text', serif;
 }
 
 .presto-logo {
@@ -70,7 +78,7 @@ p {
 }
 
 .masthead {
-    height: 100vh;
+    height: 800px;
     min-height: 500px;
     background: rgb(153,153,153);
     background: linear-gradient(90deg, rgba(153,153,153,1) 0%, rgba(188,188,191,0.8326681014202556) 50%, rgba(227,227,227,1) 100%) , url(https://image.freepik.com/free-photo/female-friends-out-shopping-together_53876-25041.jpg);
@@ -81,4 +89,34 @@ p {
 
   .i-color{
       color: var(--main-color);
+  }
+
+  .m-top{
+      margin-top: 76px;
+  }
+
+  .impronta{
+      color: var(--accent-color);
+  }
+
+
+  .nav-link{
+      display: inline-block;
+  }
+
+  .navbar-toggler:focus{
+      box-shadow: none;
+  } 
+
+  .card{
+      border: solid 2px;
+      border-color: var(--main-color);
+      border-radius: 2%;
+      margin-top: 30px;
+      text-align: center;
+      padding: 18px 18px;
+  }
+
+  .z-index{
+      z-index: 1010;
   }
