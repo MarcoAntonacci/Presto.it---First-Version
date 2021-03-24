@@ -78,7 +78,7 @@ p {
 }
 
 .masthead {
-    /* height: 800px; */
+    
     /* min-height: 500px; */
     background: rgb(153,153,153);
     background: linear-gradient(90deg, rgba(153,153,153,1) 0%, rgba(188,188,191,0.8326681014202556) 50%, rgba(227,227,227,1) 100%) , url(https://image.freepik.com/free-photo/female-friends-out-shopping-together_53876-25041.jpg);
@@ -92,7 +92,7 @@ p {
   }
 
   .m-top{
-      margin-top: 76px;
+      margin-top: 73.2px;
   }
 
   .impronta{
