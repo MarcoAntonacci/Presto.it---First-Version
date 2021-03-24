@@ -20,7 +20,7 @@ categories.forEach(cat =>{
 
     card.innerHTML = 
     `
-    <div class="card">
+    <div class="card1">
     <h3 class="fw-bold"> ${cat.name}</h3>
     ${cat.icon}
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, culpa asperiores debitis ea velit enim harum illo vero minima aliquam sint amet dolores est temporibus ullam aut eius tenetur libero?</p>

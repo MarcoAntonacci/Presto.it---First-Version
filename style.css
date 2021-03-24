@@ -108,7 +108,7 @@ p {
       box-shadow: none;
   } 
 
-  .card{
+  .card1{
       border: solid 2px;
       border-color: var(--main-color);
       border-radius: 2%;
@@ -120,3 +120,4 @@ p {
   .z-index{
       z-index: 1010;
   }
+
