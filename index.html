@@ -91,6 +91,8 @@
 
  </div>
  <h2 class="fs-1 fw-bold my-5 text-center">Migliori<span class="span-color1"> Affari</span></h2>
+
+ <!-- CAROUSEL -->
   <section class="container my-5">
     <div class="row">
       <div class="col-12">
@@ -137,6 +139,38 @@
     </div>
     </div>
   </section>
+
+  <footer class="container-fluid footer my-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h3 class="fs-2 fw-bold">Descrizione</h3>
+          <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum laborum neque possimus excepturi quod deleniti quae voluptate, iusto tempore error amet culpa autem voluptates, hic sunt? Facilis vero veritatis architecto?</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h3 class="fs-2 fw-bold">Social</h3>
+          <ul class="list-unstyled">
+            <li>
+              <a class="text-decoration-none" href="" target="blank">Facebook</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="" target="blank">Instagram</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="" target="blank">Twitter</a>
+            </li>
+            <li>
+              <a class="text-decoration-none" href="" target="blank">Linkedin</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="col-12 border boder-top-2 my-3 py-3 text-center">
+          P.Iva 12345678   Cookie Policy - Privacy Policy
+        </div>
+      </div>
+    </div>
+  </footer>
  
 
   
@@ -159,8 +193,9 @@
     <script>
    $('.last-ads').slick({
   dots: true,
-  infinite: false,
+  infinite: true,
   speed: 300,
+  center: true,
   slidesToShow: 3,
   slidesToScroll: 1,
   responsive: [
@@ -176,18 +211,11 @@
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll:1
       }
     },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
- 
+   
   ]
 });
     </script>
