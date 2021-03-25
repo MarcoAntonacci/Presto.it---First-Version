@@ -30,17 +30,7 @@ categories.forEach(cat =>{
     categoryWrapper.appendChild(card)
 })
 
-let likeIcons= document.querySelectorAll('#like')
 
-// console.log(likeIcons);
-
-likeIcons.forEach(icon => {
-    icon.addEventListener('click', () => {
-        icon.classList.toggle('fas')
-        icon.classList.toggle('far')
-    })
-
-})
 
 
 function populateLastAds(){
@@ -73,6 +63,18 @@ function populateLastAds(){
       </div>
         `
         wrapper.appendChild(card)
+
+        let likeIcons= document.querySelectorAll('#like')
+
+            console.log(likeIcons);
+
+            likeIcons.forEach(icon => {
+                icon.addEventListener('click', () => {
+                    icon.classList.toggle('fas')
+                    icon.classList.toggle('far')
+                })
+
+            })
     })
 }
     populateLastAds()
