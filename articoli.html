@@ -120,7 +120,7 @@
         </div>
 
 
-        <div style="height : 2000px;"></div>
+        <!-- <div style="height : 2000px;"></div> -->
 
 
 
@@ -161,6 +161,26 @@
       </div>
     </div>
   </footer>
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="adModal" tabindex="-1" aria-labelledby="adModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-radius">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="adModalTitle">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+            <img class="img-fluid"src="https://picsum.photos/500" alt="">
+        </div>
+        <div class="modal-footer justify-content-between">
+          <p>Prezzo : <span class="tc-accent" id="adModalPrice"> </span> $</p>
+          <p>Categoria : <span class="tc-accent" id="adModalCategory"> </span></p>
+        </div>
+      </div>
+    </div>
+  </div>
  
 
   
@@ -198,7 +218,7 @@
                              <h5 class="card-title fw-bold fs-4 my-4">${ad.name}</h5>
                              <p class="card-text text-white fw-bold">Porca Putténa! E ricordate ‘na cosa, tutta la iella buttala a mare il bambino sembra scemo in realtà lo è!</p>
                              <p class="tc-accent">${ad.price} $</p>
-                             <button class="btn button-custom rounded-pill">Scopri di più...</button>
+                             <button class="btn button-custom rounded-pill" ad-id='${ad.id}' data-bs-toggle="modal" data-bs-target="#adModal ">Scopri di più...</button>
                              <i" class="far fa-heart color-heart like"></i>
                          </div>
                      </div>
@@ -206,6 +226,17 @@
                     `
                     adsWrapper.appendChild(card)   
                 })
+                let likeIcons= document.querySelectorAll('.like')
+
+                            // console.log(likeIcons);
+
+                            likeIcons.forEach(icon => {
+                                icon.addEventListener('click', () => {
+                                    icon.classList.toggle('fas')
+                                    icon.classList.toggle('far')
+                                })
+
+                            })
               }
             
             populateLastAds(annunci)
@@ -293,6 +324,30 @@
 
                     searchOnLoad()
 
+
+                    function populateModal(){
+                       
+                       let btns = document.querySelectorAll('[ad-id]')
+
+                       btns.forEach(btn =>{
+                         btn.addEventListener('click', () =>{
+
+                          let id = btn.getAttribute('ad-id')
+
+                          let ad = annunci.find(el => el.id == id)
+
+                          let MTitle = document.querySelector('#adModalTitle')
+                          let MPrice = document.querySelector('#adModalPrice')
+                          let MCategory = document.querySelector('#adModalCategory')
+
+                          MTitle.innerHTML = ad.name
+                          MPrice.innerHTML = ad.price
+                          MCategory.innerHTML = ad.category
+                           
+                         })
+                       })
+                    }
+                    populateModal()
                   })
         </script>
         
