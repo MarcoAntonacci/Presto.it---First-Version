@@ -174,4 +174,11 @@ p {
         color: var(--accent-color);
     }
     
+
+    .filter-box{
+        background-color: var(--main-color);
+        color: var(--white);
+        padding: 24px 24px;
+        
+    }
    
