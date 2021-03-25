@@ -181,4 +181,14 @@ p {
         padding: 24px 24px;
         
     }
-   
+
+
+    #accordionFilters .accordion-button {
+        background-color: var(--accent-color);
+    }
+
+    .font-accordion {
+        font-family: 'Montserrat', sans-serif;
+        text-decoration: none;
+    }
+
