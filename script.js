@@ -58,15 +58,17 @@ function populateLastAds(){
           <p class="card-text text-white fw-bold">${ad.description}</p>
           <p class="tc-accent">${ad.price} $</p>
           <button class="btn button-custom rounded-pill">Scopri di più...</button>
-          <i id="like" class="far fa-heart color-heart"></i>
+          <i class="far fa-heart color-heart like"></i>
         </div>
       </div>
         `
         wrapper.appendChild(card)
 
-        let likeIcons= document.querySelectorAll('#like')
+        
+    })
+    let likeIcons= document.querySelectorAll('.like')
 
-            console.log(likeIcons);
+            // console.log(likeIcons);
 
             likeIcons.forEach(icon => {
                 icon.addEventListener('click', () => {
@@ -75,7 +77,6 @@ function populateLastAds(){
                 })
 
             })
-    })
 }
     populateLastAds()
     
