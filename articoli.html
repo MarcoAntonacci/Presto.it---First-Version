@@ -43,7 +43,7 @@
                 Profilo
               </a>
               <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item " href="#">Utente</a></li>
+                <li><a class="dropdown-item " href="./profilo.html">Utente</a></li>
                 <li><a class="dropdown-item" href="#">Preferiti</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Logout</a></li>
@@ -61,7 +61,7 @@
 
 
 
-
+            <!-- nella prima parte ci sono i filtri nella seconda le card (funziona tutto con le funzioni a fine pagina)-->
         <div class="container-fluid mt-5 py-5">
             <div class="row">
                 <div class="col-12 col-md-4">
@@ -128,7 +128,7 @@
 
 
 
-
+          <!--footer-->
 
   <footer class="container-fluid footer mt-5">
     <div class="container">
@@ -197,11 +197,14 @@
    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
- 
+          <!-- script con tutte le funzioni che regolano il funzionamento delle card e dei filtri-->
         <script>
+
+              //fetch è la base da cui le funzioni prendono gli annunci
             fetch('./annunci.json').then(data => data.json())
             .then(annunci =>{
                 // console.log(location.search.slice(7));
+                //questa funzione serve per creare le card
                 function populateLastAds(annunci){
                 let adsWrapper = document.querySelector('#ads-wrapper')
                 adsWrapper.innerHTML = ''
@@ -243,7 +246,7 @@
             populateLastAds(annunci)
 
            
-
+                //funzione per il filtro delle categorie
                 function populateFilterCategories(){
                     let setCategories = new Set();
                     let categoriesWrapper = document.querySelector('#category-filters')
@@ -272,6 +275,8 @@
 
                     populateFilterCategories()
                       
+                   
+                   //funzione per il filtro 'tutti gli elementi'
                     function filterCategory(){
                       let filters = document.querySelectorAll('[category-filter]')
 
@@ -295,7 +300,7 @@
                     }
                     filterCategory()
 
-
+                    //funzione per la ricerca tramite parola
                   function  filterSearch(){
                       let searchInput= document.querySelector('#input-search')
 
@@ -325,7 +330,7 @@
 
                     searchOnLoad()
 
-
+                      //funzione per il modale (la funzione viene lanciata all'interno di un'altra funzione per risolvere un problema per il quale il modale con i filtri non cambiava in base alla card scelta)
                     function populateModal(){
                        
                        let btns = document.querySelectorAll('[ad-id]')

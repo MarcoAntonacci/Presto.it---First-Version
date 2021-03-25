@@ -1,5 +1,5 @@
 // let categories = ['Bici' , 'Auto' , 'Moto' , 'Giochi' , 'Elettronica' , 'Libri' , 'Immobili' , 'Animali']   
-
+// usato per creare le card delle categorie con nome categoria e icona personalizzata
 let categories = [
     {name: 'Bici', icon:'<i class="fas fa-bicycle fs-2 mb-3 i-color"></i>'},
     {name: 'Auto', icon:'<i class="fas fa-car fs-2 mb-3 i-color"></i>'},
@@ -32,7 +32,7 @@ categories.forEach(cat =>{
 
 
 
-
+//funzione per le card del carosello nella home 
 function populateLastAds(){
     let wrapper = document.querySelector('.last-ads')
 

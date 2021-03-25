@@ -151,6 +151,10 @@ p {
         font-size: 25px;
     }
 
+    .tc-black {
+        color: var(--black);
+    }
+
     .tc-main {
         color: var(--main-color);
     }
