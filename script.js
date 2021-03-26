@@ -46,6 +46,9 @@ function populateLastAds(){
         { title : 'Iphone 24' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
     ]
 
+
+     
+
     ads.forEach(ad=>{
         let card = document.createElement('div')
 

@@ -73,7 +73,8 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <h2 class="tc-black">Nome Utente</h2>
-                    <h3 class="tc-black">Indirizzo :</h3>
+                    <h3 class="tc-black">Indirizzo: Utente_presto@gmail.com</h3>
+                    <h3 class="tc-black">Tel: 123456789</h3>
                 </div>
             </div>
         </div>
@@ -87,7 +88,7 @@
                 <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
                   <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Annunci Chiusi</button>
                   <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Annunci Aperti</button>
-                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Guadagno Attuale</button>
                 </div>
               </nav>
               <div class="tab-content" id="nav-tabContent">
@@ -106,9 +107,33 @@
                 </table>
               </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                  
+                  <table class="table table-presto table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Titolo</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Prezzo</th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-open">
+                    </tbody>
+                  </table>
                 </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="container my-5 py-5">
+                      <div class="row">
+                        <div class="col-12 col-md-6 text-center">
+                          <h3 class="tc-black fw-bold">Affari conclusi</h3>
+                          <h4 class="fs-1 tc-main" id="closedCounter"> 12</h4>
+                        </div>
+                        <div class="col-12 col-md-6 text-center">
+                          <h3 class="tc-black fw-bold">Soldi Guadagnati €</h3>
+                          <h4 class="fs-1 tc-main" id="earnedCounter"> 1000 €</h4>
+                        </div>
+                      </div>
+                    </div>
+                </div>
               </div>
               
             </div>
@@ -181,9 +206,13 @@
    fetch('./annunci.json').then(data => data.json())
             .then(annunci =>{
 
+
+
+              //funzioni per la tabella annunci chiusi ed aperti
               function populateClosed() {
                 let table= document.querySelector('#table-closed');
-
+                let counter = document.querySelector('#closedCounter')
+                let earnedCounter = document.querySelector('#earnedCounter')
                 let ads= annunci.slice(0,5)
 
                 ads.forEach(ad => {
@@ -198,11 +227,30 @@
 
                   table.appendChild(tr)
                 })
-                
+                counter.innerHTML = ads.length
+                earnedCounter.innerHTML = ads.reduce((tot , el) => Number(tot) + Number(el.price) , 0)
             }
               populateClosed() 
 
-              
+              function populateOpen(){
+                let table = document.querySelector('#table-open')
+
+                let ads = annunci.slice(5,10)
+
+                ads.forEach(ad =>{
+                  let tr = document.createElement('tr')
+
+                  tr.innerHTML= `
+                  <th scope="row">${ad.id}</th>
+                  <td>${ad.name}</td>
+                  <td>${ad.category}</td>
+                  <td>${ad.price}</td>
+                  `
+                  table.appendChild(tr)
+                })
+
+              }
+              populateOpen()
           })
 </script>
 
