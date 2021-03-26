@@ -91,32 +91,23 @@
                 </div>
               </nav>
               <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><table class="table table-presto table-striped">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <table class="table table-presto table-striped">
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
+                      <th scope="col">Titolo</th>
+                      <th scope="col">Categoria</th>
+                      <th scope="col">Prezzo</th>
                     </tr>
                   </thead>
                   <tbody id="table-closed">
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                  
                   </tbody>
-                </table></div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                </table>
+              </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  
+                </div>
                 <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
               </div>
               
@@ -191,28 +182,28 @@
             .then(annunci =>{
 
               function populateClosed() {
-                let table= document.querySelector('#table-closed')
+                let table= document.querySelector('#table-closed');
 
                 let ads= annunci.slice(0,5)
 
-                ads.array.forEach(ad => {
-                  let tr= document.createElement('tr')
+                ads.forEach(ad => {
+                  let tr = document.createElement('tr')
 
                   tr.innerHTML= `
                   <th scope="row">${ad.id}</th>
-                      <td>${ad.name}</td>
-                      <td>${ad.category}</td>
-                      <td>${ad.price}</td>
+                  <td>${ad.name}</td>
+                  <td>${ad.category}</td>
+                  <td>${ad.price}</td>
                   `
 
                   table.appendChild(tr)
-                });
-
-              }
-              function populateClosed() 
+                })
+                
+            }
+              populateClosed() 
 
               
-            })
+          })
 </script>
 
 
