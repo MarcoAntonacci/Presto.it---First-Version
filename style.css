@@ -11,7 +11,7 @@
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Crimson Text', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3, h4, h5 {
@@ -32,7 +32,7 @@ p {
 }
 .span-color1{
     color: var(--main-color);
-    font-family: 'Crimson Text', serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .presto-logo {
@@ -87,7 +87,7 @@ p {
     
     /* min-height: 500px; */
     background: rgb(153,153,153);
-    background: linear-gradient(90deg, rgba(153,153,153,1) 0%, rgba(188,188,191,0.8326681014202556) 50%, rgba(227,227,227,1) 100%) , url(https://image.freepik.com/free-photo/female-friends-out-shopping-together_53876-25041.jpg);
+    background: linear-gradient(90deg, rgba(153, 153, 153, 0.808) 0%, rgba(188, 188, 191, 0.795) 50%, rgba(227, 227, 227, 0.849) 100%) , url(https://image.freepik.com/free-photo/female-friends-out-shopping-together_53876-25041.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -203,7 +203,7 @@ p {
     }
 
     .font-fam{
-        font-family: 'Crimson Text', serif; 
+        font-family: 'Lato', sans-serif; 
         font-size: 30px;
        
     }
@@ -220,7 +220,7 @@ p {
       background-color: var(--accent-color);
       width: 30%;
       border-radius: 12px;
-      font-family:'Crimson Text', serif;
+      font-family: 'Lato', sans-serif;
       font-size: 20px;
       color: var(--black);
   }
@@ -249,3 +249,15 @@ p {
         color: #fff;
         border-color: #373b3e;
   }
+
+
+
+
+  .social-icons:hover {
+    transform: scale(1.6);
+    transition: ease-in-out 0.5s;
+    color: var(--accent-color);
+}
+
+
+  
