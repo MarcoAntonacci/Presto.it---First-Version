@@ -202,3 +202,12 @@ p {
         text-decoration: none;
     }
 
+    .font-fam{
+        font-family: 'Crimson Text', serif; 
+        font-size: 30px;
+       
+    }
+
+    #main-color {
+        color: var(--main-color);
+    }
