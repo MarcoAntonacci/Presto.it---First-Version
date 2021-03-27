@@ -57,7 +57,7 @@
         "id": 10,
         "name": "Ford Puma",
         "category": "Motori",
-        "price": "25000.02"
+        "price": "250.02"
     },
     {
         "id": 11,
@@ -69,7 +69,7 @@
         "id": 12,
         "name": "Trilocale",
         "category": "Immobili",
-        "price": "55000.54"
+        "price": "5500.54"
     },
     {
         "id": 13,
@@ -105,7 +105,7 @@
         "id": 18,
         "name": "Ducati Monster",
         "category": "Motori",
-        "price": "12000.13"
+        "price": "1200.13"
     },
     {
         "id": 19,
@@ -113,12 +113,7 @@
         "category": "Sport",
         "price": "90.64"
     },
-    {
-        "id": 20,
-        "name": "Villetta triste",
-        "category": "Immobili",
-        "price": "250000.45"
-    },
+  
     {
         "id": 21,
         "name": "Guanti invernali",
@@ -213,7 +208,7 @@
         "id": 36,
         "name": "Villa",
         "category": "Immobili",
-        "price": "300000.53"
+        "price": "30000.53"
     },
     {
         "id": 37,
@@ -279,7 +274,7 @@
         "id": 47,
         "name": "Trattore",
         "category": "Giardinaggio",
-        "price": "12000.09"
+        "price": "1200.09"
     },
     {
         "id": 48,

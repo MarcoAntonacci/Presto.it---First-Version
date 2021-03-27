@@ -122,6 +122,11 @@ p {
       margin-top: 30px;
       text-align: center;
       padding: 18px 18px;
+      transition: ease-in-out 0.8s;
+  }
+
+  .card1:hover{
+      background: linear-gradient(to left, #09b1ba8f, #fc7b36a9);
   }
 
   .z-index{
@@ -187,15 +192,19 @@ p {
     
 
     .filter-box{
-        background-color: var(--main-color);
+        background-color: #095558f3;
         color: var(--white);
         padding: 24px 24px;
         
     }
 
+.accordion-button:not(.collapsed) {
+    color: var(--black);
+    background-color: rgb(231, 241, 255);
+}
 
     #accordionFilters .accordion-button {
-        background-color: var(--accent-color);
+        background-color: #ff7a33f3;
     }
 
     .font-accordion {
@@ -261,4 +270,25 @@ p {
 }
 
 
-  
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+    opacity: .75 ;
+}
+
+.bg-modal {
+    background-color: #1d5a5c;
+}
+.bg-modal-footer {
+    background-color: #1d5a5c;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: .75rem;
+    border-top: 1px solid #1d5a5c;
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-bottom-left-radius: calc(.3rem - 1px);
+}
