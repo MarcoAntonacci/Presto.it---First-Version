@@ -1,29 +1,29 @@
 // let categories = ['Bici' , 'Auto' , 'Moto' , 'Giochi' , 'Elettronica' , 'Libri' , 'Immobili' , 'Animali']   
 // usato per creare le card delle categorie con nome categoria e icona personalizzata
 let categories = [
-    {name: 'Bici', icon:'<i class="fas fa-bicycle fs-2 mb-3 i-color"></i>'},
-    {name: 'Auto', icon:'<i class="fas fa-car fs-2 mb-3 i-color"></i>'},
-    {name: 'Moto', icon:'<i class="fas fa-motorcycle fs-2 mb-3 i-color"></i>'},
-    {name: 'Giochi', icon:'<i class="fas fa-gamepad fs-2 mb-3 i-color"></i>'},
-    {name: 'Elettronica', icon:'<i class="fas fa-laptop-medical fs-2 mb-3 i-color"></i>'} , 
-    {name: 'Libri', icon:'<i class="fas fa-book fs-2 mb-3 i-color"></i>'} ,
-    {name: 'Immobili', icon:'<i class="fas fa-home fs-2 mb-3 i-color"></i>'} ,
-    {name: 'Animali', icon:'<i class="fas fa-paw fs-2 mb-3 i-color"></i>'} ,
-    {name: 'Cucina', icon:'<i class="fas fa-utensils fs-2 mb-3 i-color"></i>'} ,
+    {name: 'Bici', icon:'<i class="fas fa-bicycle fs-2 mb-3 i-color"></i>' , text:"Vuoi un giorno fare il giro d'italia con la maglia rosa? Beh noi non possiamo garantirti che ci riuscirai ma possiamo rendere la tua passione ancora più bella!"},
+    {name: 'Auto', icon:'<i class="fas fa-car fs-2 mb-3 i-color"></i>' , text:'Vuoi cambiare auto? o forse vorresti vedere la tua? vedi le migliori offerte qui da noi !'},
+    {name: 'Moto', icon:'<i class="fas fa-motorcycle fs-2 mb-3 i-color"></i>', text:'Ti piace la velocità? O sei più tipo da lunghi viaggi? Nessun problema da noi potrai trovare tutto ciò che ti serve'},
+    {name: 'Giochi', icon:'<i class="fas fa-gamepad fs-2 mb-3 i-color"></i>', text:'La sezione preferita da tutti i bambini! vuoi fare un regalo stupendo ai tuoi figli? beh cosa aspetti sai già cosa fare !'},
+    {name: 'Elettronica', icon:'<i class="fas fa-laptop-medical fs-2 mb-3 i-color"></i>', text:'Sei appassionato di tecnologia? ti serve un pc nuovo? o forse vorresti avere una casa domotica? nessun problema troverai tutto quello che vuoi e anche di più ;)'} , 
+    {name: 'Libri', icon:'<i class="fas fa-book fs-2 mb-3 i-color"></i>', text:'Sei un amante della lettura? sei alla ricerca di una nuova avventura? allora visita la nostra sezione apposita! '} ,
+    {name: 'Immobili', icon:'<i class="fas fa-home fs-2 mb-3 i-color"></i>', text:'Sei alla ricerca di una nuova casa? o di un terreno? abbiamo tutto quello che fa al caso tuo' } ,
+    {name: 'Animali', icon:'<i class="fas fa-paw fs-2 mb-3 i-color"></i>', text:'Troverai tantissimi articoli per il divertimento e la salute dei tuoi amici a 4 zampe... cosa aspetti ?'} ,
+    {name: 'Cucina', icon:'<i class="fas fa-utensils fs-2 mb-3 i-color"></i>', text:'Sei appassionato di cucina? O forse sei alle prime armi, in ogni caso abbiamo quello che serve per rendere la tua esperienza unica!'} ,
 ]
-
+// usata per creare le card delle categorie 
 let categoryWrapper = document.querySelector('#category-wrapper')
 
 categories.forEach(cat =>{
     let card = document.createElement('div')
-    card.classList.add('col-12' , 'col-md-4')
+    card.classList.add('col-12' , 'col-md-6' , 'col-lg-4')
 
     card.innerHTML = 
     `
     <div class="card1">
     <h3 class="fw-bold"> ${cat.name}</h3>
     ${cat.icon}
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, culpa asperiores debitis ea velit enim harum illo vero minima aliquam sint amet dolores est temporibus ullam aut eius tenetur libero?</p>
+    <p>${cat.text}</p>
     </div>
     
     `
@@ -72,7 +72,7 @@ function populateLastAds(){
         wrapper.appendChild(card)
 
         
-    })
+    })  //da alla funzione la possibilità di riempire il cuore del like
     let likeIcons= document.querySelectorAll('.like')
 
             // console.log(likeIcons);

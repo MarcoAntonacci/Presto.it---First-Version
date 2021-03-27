@@ -24,6 +24,9 @@
     <title>Profilo</title>
   </head>
   <body>
+
+
+    
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg px-4 bg-navbar z-index">
       <div class="container-fluid">
@@ -81,7 +84,7 @@
         </div>
 
 
-
+            <!-- container per la tabella annunci chusi-aperti-e soldi guadagnati-->
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -209,7 +212,7 @@
 
 
 
-              //funzioni per la tabella annunci chiusi ed aperti
+              //funzione per la tabella annunci chiusi e per calcolare il guadagno
               function populateClosed() {
                 let table= document.querySelector('#table-closed');
                 let counter = document.querySelector('#closedCounter')
@@ -230,9 +233,12 @@
                 })
                 counter.innerHTML = ads.length
                 earnedCounter.innerHTML = ads.reduce((tot , el) => Number(tot) + Number(el.price) , 0)
+                
             }
               populateClosed() 
 
+
+              //funzione per la tabella annunci aperti
               function populateOpen(){
                 let table = document.querySelector('#table-open')
 

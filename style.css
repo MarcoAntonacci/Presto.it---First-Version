@@ -123,6 +123,7 @@ p {
       text-align: center;
       padding: 18px 18px;
       transition: ease-in-out 0.8s;
+      height: 270px;
   }
 
   .card1:hover{
