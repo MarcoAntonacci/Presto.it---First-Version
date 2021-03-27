@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    
     <!-- Link FontAwesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -26,7 +28,7 @@
   <body>
 
 
-    
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg px-4 bg-navbar z-index">
       <div class="container-fluid">
@@ -71,10 +73,10 @@
             <!-- container del profilo con immagine nella prima parte e dati nella seconda-->
         <div class="container my-5 py-5">
             <div class="row align-items-center">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" data-aos="fade-right" data-aos-duration="3000">
                     <img class="img-fluid" src="./img/Home Delivery.png" alt="">
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"  data-aos-duration="2000">
                     <h2 class="mb-4"><i class="fas fa-user"></i> Utente: <span class="tc-main fs-3">Tizio Incognito</span></h2>
                     <h3 class="mb-3"><i class="fas fa-map-marker-alt"></i> Indirizzo: <span class="tc-main fs-4">Viale del Tramonto n.1</span></h3>
                     <h3 class="mb-3"></i><i class="fas fa-envelope"></i> Email: <span class="tc-main fs-4">utente_presto@gmail.com</span></h3>
@@ -204,6 +206,12 @@
     <!-- Slick carousel -->
    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
 
  
 <script>

@@ -20,7 +20,7 @@ categories.forEach(cat =>{
 
     card.innerHTML = 
     `
-    <div class="card1">
+    <div class="card1" data-aos="zoom-in" data-aos-duration="1500">
     <h3 class="fw-bold"> ${cat.name}</h3>
     ${cat.icon}
     <p>${cat.text}</p>
