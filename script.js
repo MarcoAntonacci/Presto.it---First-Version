@@ -37,13 +37,17 @@ function populateLastAds(){
     let wrapper = document.querySelector('.last-ads')
 
     let ads = [
-        { title : 'Moto' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
-        { title : 'Auto rotta' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1000 },
-        { title : 'Panda' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
-        { title : 'Bambola' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
-        { title : 'Raccolta fumetti' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
-        { title : 'Orologio Hemilton' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
-        { title : 'Iphone 24' , description : 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.', price : 1230 },
+        { title : 'Moto' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Auto rotta' , description : 'This is a wider card with supporting text below as a natural lead...', price : 1000 },
+        { title : 'Panda' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Bambola' , description : 'This is a wider card with supporting text below as a natural lead-in..', price : 1230 },
+        { title : 'Raccolta fumetti' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Orologio Hemilton' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Samsung Galaxy s200' , description : 'This is a wider card with supporting text below as a natural lead-in..', price : 1230 },
+        { title : 'Iphone 24' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Tablet' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Casa degli spiriti' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
+        { title : 'Bello figo' , description : 'This is a wider card with supporting text below as a natural lead-in...', price : 1230 },
     ]
 
 

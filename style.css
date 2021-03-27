@@ -22,6 +22,8 @@ p {
     color: var(--black);
 }
 
+
+
 .p-radius {
     border-radius: var(--radius);
 }
@@ -62,7 +64,7 @@ p {
 }
 
 .link-zoom:hover {
-    transform: scale(1.1);
+  transform: scaleY(1.2);
     transition: ease-in-out 0.5s;
 }
 
@@ -85,9 +87,8 @@ p {
 
 .masthead {
     
-    /* min-height: 500px; */
-    background: rgb(153,153,153);
-    background: linear-gradient(90deg, rgba(153, 153, 153, 0.808) 0%, rgba(188, 188, 191, 0.795) 50%, rgba(227, 227, 227, 0.849) 100%) , url(https://image.freepik.com/free-photo/female-friends-out-shopping-together_53876-25041.jpg);
+    min-height: 500px; 
+     background: linear-gradient(90deg, rgba(153, 153, 153, 0.808) 0%, rgba(188, 188, 191, 0.795) 50%, rgba(227, 227, 227, 0.849) 100%) , url(https://image.freepik.com/free-photo/female-friends-out-shopping-together_53876-25041.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,11 +170,11 @@ p {
     }
 
     .ads-card-overlay {
-        background-color: #0225278a;
+        transition: ease-in-out 0.5s;
     }
 
     .ads-card-overlay:hover {
-        box-shadow: 2px 3px 23px 15px rgba(2,37,39,0.49);
+        background-color: #0225278a;
     }
 
     .categorie-affari {
